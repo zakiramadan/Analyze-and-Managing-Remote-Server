@@ -1,4 +1,4 @@
-# Praktek Dipandu: Menganalisis dan Mengelola Server Remote pada Desktop Linux Ubuntu
+# Panduan: Menganalisis dan Mengelola Server Remote
 
 ## Tujuan
 
