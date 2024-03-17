@@ -1,48 +1,48 @@
-# Panduan: Menganalisis dan Mengelola Server Remote
+# Panduan: Analyzing and Managing Remote Servers
 
 ## Tujuan
 
-Latihan ini bertujuan untuk memberikan pemahaman praktis tentang bagaimana menganalisis dan mengelola server remote menggunakan desktop Linux Ubuntu. Peserta akan menggunakan serangkaian perintah dan alat bawaan untuk mencapai tujuan ini.
+This exercise aims to provide practical understanding of how to analyze and manage remote servers using desktop Linux Ubuntu. Participants will use a series of commands and built-in tools to achieve this goal.
 
 ## Deskripsi
 
-Latihan ini memandu peserta melalui proses menganalisis dan mengelola server remote menggunakan desktop Linux Ubuntu. Peserta akan menggunakan perintah seperti `ssh`, `ping`, `traceroute`, dan `netstat` untuk memeriksa konektivitas, melacak rute paket, dan mengevaluasi status server remote.
+This exercise guides participants through the process of analyzing and managing remote servers using desktop Linux Ubuntu. Participants will use commands such as `ssh`, `ping`, `traceroute`, and `netstat` to check connectivity, trace packet routes, and evaluate the status of remote servers.
 
 ### Langkah-langkah
 
 1. **Membuat Koneksi SSH ke Server Remote**
 
-   - Gunakan perintah `ssh` untuk terhubung ke server remote.
+   - Use the `ssh` command to connect to the remote server.
      ```bash
      ssh username@remote_server_ip
      ```
 
 2. **Memeriksa Konektivitas Jaringan**
 
-   - Gunakan perintah `ping` untuk memeriksa konektivitas dengan server remote.
+   - Use the `ping` command to check connectivity with the remote server.
      ```bash
      ping remote_server_ip
      ```
-   - Gunakan perintah `traceroute` untuk melacak rute paket menuju server remote.
+   - Use the `traceroute` command to trace packet routes to the remote server.
      ```bash
      traceroute remote_server_ip
      ```
 
 3. **Meninjau Status Port pada Server Remote**
-   - Gunakan perintah `netstat` untuk melihat status port pada server remote.
+   - Use the `netstat` command to view the status of ports on the remote server.
      ```bash
      netstat -tuln
      ```
-   - Identifikasi port yang sedang mendengarkan dan layanan yang berjalan.
+   - Identify ports that are listening and the services running.
 
 ## Penilaian
 
-- Keberhasilan dalam membuat koneksi SSH ke server remote.
-- Kemampuan menggunakan perintah `ping` dan `traceroute` untuk memeriksa konektivitas jaringan.
-- Kemampuan menggunakan `netstat` untuk menganalisis status port pada server remote.
-- Kemampuan untuk menganalisis informasi yang diperoleh dan mengevaluasi status server remote.
+- Success in establishing an SSH connection to the remote server.
+- Ability to use the `ping` and `traceroute` commands to check network connectivity.
+- Ability to use `netstat` to analyze port status on the remote server.
+- Ability to analyze the information obtained and evaluate the status of the remote server.
 
 ## Catatan Tambahan
 
-- Pastikan untuk menggunakan perintah dengan hati-hati dan hanya pada server yang Anda miliki atau dengan izin yang sesuai.
-- Latihan ini bertujuan untuk memberikan pemahaman praktis tentang menganalisis dan mengelola server remote, yang merupakan keterampilan yang penting dalam administrasi sistem Linux.
+- Be sure to use commands carefully and only on servers you own or have appropriate permissions for.
+- This exercise aims to provide practical understanding of analyzing and managing remote servers, which is an important skill in Linux system administration.
