@@ -17,48 +17,85 @@ The purpose of this exercise is to provide users with the understanding and skil
 
 Follow the steps below to complete the exercise:
 
-1. **Activate and Access Web Console**
-
-   - Install Cockpit if not installed already.
+1. **Open Lab Console Redhat dan mulai**
 
    ```bash
-    sudo dnf install cockpit
+    lab start support-cockpit
    ```
 
-   - Enable and start the cockpit service.
+   ![App Screenshot](</Image/1. lab start support-cockpit.png>)
+
+   ```bash
+    ssh student@servera
+   ```
+
+   ![App Screenshot](</Image/19. student@servera.png>)
 
    ```bash
     sudo systemctl enable --now cockpit.socket
    ```
 
-   - Add the cockpit service to the firewall.
+   ![App Screenshot](</Image/2. systemctl enable --now cockpit.socket.png>)
 
-   ```bash
-    sudo firewall-cmd --add-service=cockpit --permanent
-    sudo firewall-cmd --reload
-   ```
+2. **Kemudian buka browser firefox redhat anda dan ketik link berikut, kemudian scroll ke bawah dan klik `Accept and risk`**
 
-2. **Mengakses Konsol Web**
+- Open a web browser and navigate to https://servera.lab.example.com:9090 or IPAddress:9090
 
-- Open a web browser and navigate to https://servera.lab.example.com:9090.
-- Log in with your username and password.
+![App Screenshot](</Image/10. advanced.png>)
 
-3. **Mengubah Kata Sandi di Konsol Web**
+![App Screenshot](</Image/11. accept the risk and continue.png>)
 
-- Click the Accounts button in the navigation bar.
-- Click your account label and then click the Set password button.
-- Enter your old and new passwords, then click Set password.
+3. **Login dengan akun berikut :**
 
-4. **Jalankan Perintah dari Sesi Terminal**
+- Username : student
+- Password : student
 
-- Click the Terminal button in the navigation bar to access the terminal.
-- Verify command execution by running id command.
+![App Screenshot](</Image/13. user dn pwd=student.png>)
 
-5. **Mengelola Layanan Sistem dengan Konsol Web**
+4. **Buka limit access atau untuk mengganti menjadi administrator.Klik `Turn on administrative access`**
 
-- Start, enable, disable, and stop services from the Services section.
-- Configure network interfaces and firewall rules from the Networking section.
-- Administer user accounts from the Accounts section.
+![App Screenshot](</Image/15. turn on administrative access.png>)
+
+5. **Klik `Authenticate`**
+
+![App Screenshot](</Image/16. switch to administrative access.png>)
+
+6. **Masuk ke Account >> Create New Account**
+
+![App Screenshot](</Image/40. Existing user accounts.png>)
+
+7. **Isi data akun**
+
+- Full name: manager1
+- Username: manager1
+- Password: 01redhat78#
+- Confirm: 01redhat78#
+
+![App Screenshot](</Image/13. create new account.png>)
+
+8. **Buka Terminal >> id manager1 >> sudo usermod -aG wheel manager1 >> id manager1**
+
+![App Screenshot](</Image/14. command terminal.png>)
+
+9. **Masuk ke Service >> cari filter dengan nama psacct, kemudian klik yang biru**
+
+![App Screenshot](</Image/15. kernel process accounting.png>)
+
+10. **Active kan server psacct.service**
+
+![App Screenshot](</Image/16. klik tombol on kernel process.png>)
+
+11. **Log out dan buka terminal, kemudian akhiri dengan perintah:**
+
+- Log out
+
+![App Screenshot](</Image/17. log out.png>)
+
+```bash
+ lab finish support-cockpit
+```
+
+![App Screenshot](</Image/18. lab finish support-cockpit.png>)
 
 ## Penilaian
 
